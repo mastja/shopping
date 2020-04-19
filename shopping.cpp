@@ -168,7 +168,7 @@ int knapsackDyn(int W[], int P[], int N, int M, vector<int> &v){
     int maxStore = K[N][M];
     int weightStore = M;
 
-    for (int i = N; i > 0 && res > 0; i--){
+    for (int i = N; i > 0 && maxStore > 0; i--){
         if (maxStore == K[i - 1][weightStore])
             // item is not in knapsack
             continue;
